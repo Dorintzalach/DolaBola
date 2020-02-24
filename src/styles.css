@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: alegreya-bold;
+  src: url("assets/fonts/alegreya-sans/AlegreyaSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: alegreya-reg;
+  src: url("assets/fonts/alegreya-sans/AlegreyaSans-Regular.ttf");
+}
