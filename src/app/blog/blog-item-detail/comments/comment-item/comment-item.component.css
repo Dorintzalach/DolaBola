@@ -1,0 +1,68 @@
+.icon-img{
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.date-comment-row{
+  font-family: alegreya-reg;
+  font-size: 18px;
+  color: #A9A9A9;
+}
+
+.comment-content{
+  font-family: alegreya-reg;
+  font-size: 28px;
+  color: #3B3C3C;
+}
+
+.comment-owner{
+  font-family: alegreya-bold;
+  font-size: 36px;
+  color: #3B3C3C;
+}
+
+.comments-container{
+  padding: 0% 0% 0% 4%;
+}
+
+.comment-content-col{
+  padding: 0% 3% 0% 2%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width:  1224px) and (max-width: 1824px){
+  .date-comment-row{
+    font-size: 15px;
+  }
+
+  .comment-owner{
+    font-size: 30px;
+  }
+
+  .comment-content{
+    font-size: 23px;
+  }
+
+  .comments-container{
+    padding: 0% 0% 0% 4%;
+  }
+
+  .comment-content-col{
+    padding: 0% 3% 0% 2%;
+  }
+
+}
+@media only screen and (max-width: 720px) {
+  .comment-owner{
+    font-size: 35px;
+  }
+
+  .comment-content-col{
+    padding: 2% 7% 0% 3%;
+  }
+
+  .comments-container{
+    padding: 8% 0% 0% 4%;
+  }
+}

@@ -3,10 +3,7 @@ import {GalleryService} from './gallery.service';
 import {
   NgxGalleryOptions,
   NgxGalleryImage,
-  NgxGalleryAnimation,
-  NgxGalleryAction,
-  NgxGalleryHelperService,
-  NgxGalleryOrder
+  NgxGalleryAnimation
 } from 'ngx-gallery';
 import 'hammerjs';
 
@@ -38,11 +35,11 @@ export class GalleryComponent implements OnInit {
         image: false,
         thumbnails: true,
         imageArrows: true,
-        arrowPrevIcon: 'fas fa-chevron-left',
-        arrowNextIcon: 'fas fa-chevron-right',
-        closeIcon: 'fa fa-window-close',
-        // fullscreenIcon: 'fa fa-arrows',
-        spinnerIcon: 'fa fa-refresh fa-spin fa-3x fa-fw',
+        arrowPrevIcon: 'flaticon-left-arrow-1',
+        arrowNextIcon: 'flaticon-right-arrow',
+        closeIcon: 'flaticon-close',
+        fullscreenIcon: 'fa fa-arrows',
+        // spinnerIcon: 'fa fa-refresh fa-spin fa-3x fa-fw',
         // previewFullscreen: true
       },
       // max-width 800

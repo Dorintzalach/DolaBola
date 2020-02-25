@@ -1,0 +1,40 @@
+<a style="cursor: pointer"
+   [routerLink]="[id]">
+  <div class="row">
+    <div class="col-md-12 img-col">
+      <img src="{{ currentBlogItem.imagePath }}" class="img-fluid my-img"/>
+    </div>
+  </div>
+  <div class="row justify-content-between my-detail-row">
+    <div class="col-md-5 col-sm-5 col-xs-5">
+      {{ currentBlogItem.date }}
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-7">
+      <div class="row justify-content-end align-items-center">
+        <div class="col-md-3  col-sm-2 col-xs-2 icons-col">
+          <img src="assets/pictures/blog/like.png" class="icon-img"/>
+          {{ currentBlogItem.likes }}
+        </div>
+        <div class="col-md-3 col-sm-2 col-xs-2 icons-col">
+          <img src="assets/pictures/blog/comment.png" class="icon-img"/>
+          {{ currentBlogItem.comments.length }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 title-col">
+      {{ currentBlogItem.title }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 desc-col">
+      {{ currentBlogItem.description }}
+    </div>
+  </div>
+</a>
+
+
+
+
+

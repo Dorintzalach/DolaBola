@@ -1,0 +1,6 @@
+<div class="row my-row mg-bottom justify-content-center" *ngFor="let row of orderedItems">
+  <ng-container *ngFor="let item of row?.items; let i = index">
+    <app-drink-item class="col-sm-12 col-xs-12 col-md-4" [currentMenuItem]="item" [index]="i"></app-drink-item>
+  </ng-container>
+</div>
+

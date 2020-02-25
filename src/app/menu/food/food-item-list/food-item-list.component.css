@@ -1,0 +1,23 @@
+.my-row-items{
+  display: flex;
+  flex-direction: column;
+}
+.my-row{
+  padding: 1%;
+  margin: 1%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 769px) {
+  .my-row{
+    padding: 0;
+    margin: 0;
+  }
+}
+/*/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .my-row{
+    padding: 1%;
+    margin: 1%;
+  }
+}

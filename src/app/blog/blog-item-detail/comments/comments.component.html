@@ -1,0 +1,18 @@
+<div class="comments-container">
+  <div class="row comments">
+    <h1 class="comments-title">
+      COMMENTS
+    </h1>
+    <div [class]="commentsOpen? 'container-A': 'container-B'">
+      <div [ngClass]="commentArrow" (click)="this.getComments()">
+
+      </div>
+    </div>
+    <div class="comments-div" *ngIf="commentsOpen">
+      <app-comment-item
+        *ngFor="let comment of currentBlogItem.comments" [currentComment]="comment">
+      </app-comment-item>
+    </div>
+  </div>
+</div>
+

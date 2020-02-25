@@ -1,0 +1,49 @@
+.my-detail-row{
+  font-family: alegreya-reg;
+  color: 	#A9A9A9;
+  size: 1.3vw;
+}
+.title-col{
+  font-family: alegreya-bold;
+  font-size: 2vw;
+  color: #3B3C3C;
+}
+.my-img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.desc-col{
+  font-family: alegreya-reg;
+  color: #808080;
+  font-weight: 500;
+  font-size: 1.3vw;
+}
+.icon-img{
+  width: 18px;
+  height: 15px;
+  object-fit: cover;
+}
+.icons-col{
+  padding: 0;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+@media only screen and (max-width: 720px) {
+  .my-img{
+    height: 550px;
+  }
+
+  .title-col{
+    font-size: 40px;
+  }
+
+  .desc-col{
+    font-size: 30px;
+  }
+}

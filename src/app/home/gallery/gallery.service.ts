@@ -10,21 +10,21 @@ export class GalleryService {
 
   constructor() {
     this.images = [
-      {small: '../../assets/pictures/gallery/gallery-img1.jpg',
-        medium: '../../assets/pictures/gallery/gallery-img1.jpg',
-        big: '../../assets/pictures/gallery/gallery-img1.jpg'
+      {small: '/../../assets/pictures/gallery/gallery-img1.jpg',
+        medium: '/../../assets/pictures/gallery/gallery-img1.jpg',
+        big: '/../../assets/pictures/gallery/gallery-img1.jpg'
       },
-      {small: '../../assets/pictures/gallery/gallery-img2.jpg',
-        medium: '../../assets/pictures/gallery/gallery-img2.jpg',
-        big: '../../assets/pictures/gallery/gallery-img2.jpg'
+      {small: '/../../assets/pictures/gallery/gallery-img2.jpg',
+        medium: '/../../assets/pictures/gallery/gallery-img2.jpg',
+        big: '/../../assets/pictures/gallery/gallery-img2.jpg'
       },
-      {small: '../../assets/pictures/gallery/gallery-img3.jpg',
-        medium: '../../assets/pictures/gallery/gallery-img3.jpg',
-        big: '../../assets/pictures/gallery/gallery-img3.jpg'
+      {small: '/../../assets/pictures/gallery/gallery-img3.jpg',
+        medium: '/../../assets/pictures/gallery/gallery-img3.jpg',
+        big: '/../../assets/pictures/gallery/gallery-img3.jpg'
       },
-      {small: '../../assets/pictures/gallery/gallery-img4.jpg',
-        medium: '../../assets/pictures/gallery/gallery-img4.jpg',
-        big: '../../assets/pictures/gallery/gallery-img4.jpg'
+      {small: '/../../assets/pictures/gallery/gallery-img4.jpg',
+        medium: '/../../assets/pictures/gallery/gallery-img4.jpg',
+        big: '/../../assets/pictures/gallery/gallery-img4.jpg'
       }
     ];
   }

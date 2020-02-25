@@ -1,0 +1,61 @@
+/*.my-form-input{*/
+/*  outline: none;*/
+/*}*/
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #3B3C3C;
+  font-size: 1.2vw;
+  line-height: 26px;
+  padding-bottom: 20px;
+  color: #3B3C3C;
+  outline: 0;
+  font-weight: 500;
+}
+
+.my-form-group{
+  font-family: alegreya-reg;
+  color: black;
+  font-size: 0.5vw;
+  font-weight: 500;
+}
+
+.my-btn{
+  color: black;
+  padding: 0.1vw 2.8vw 0.1vw 2.8vw;
+  background-color: #F0F0F0;
+  font-size: 1.3vw;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.title{
+  font-size: 1.5vw;
+  font-family: alegreya-bold;
+  color: #3B3C3C;
+}
+
+
+@media only screen and (max-width: 720px) {
+  input {
+    font-size: 16px;
+    color: #3C3C3C;
+  }
+
+  .my-form-group{
+    padding-left: 3%;
+  }
+
+  #Comment{
+    font-size: 14px;
+    padding-bottom: 59px;
+  }
+
+  .my-btn{
+    padding: 0% 20% 0% 20%;
+    background-color: #F0F0F0;
+    font-size: 25px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+}

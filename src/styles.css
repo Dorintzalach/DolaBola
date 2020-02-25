@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
 @font-face {
   font-family: alegreya-bold;
   src: url("assets/fonts/alegreya-sans/AlegreyaSans-Bold.ttf");

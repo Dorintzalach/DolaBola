@@ -1,0 +1,32 @@
+<hr>
+<div class="comments-container">
+  <div class="row justify-content-between">
+    <div class="col-6 date-comment-row">
+      {{ currentComment.date }}
+      by
+      {{ currentComment.owner}}
+    </div>
+    <div class="col-2 col-sm-3 col-xs-3">
+      <div class="date-comment-row">
+        <img src="assets/pictures/blog/comment.png" class="icon-img"/>
+        Reply
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 col-sm-5 col-xs-5">
+      <h3 class="comment-owner">
+        {{ currentComment.owner | uppercase}}
+      </h3>
+    </div>
+  </div>
+  <div class="row comment-content">
+    <div class="col-12 comment-content-col">
+      {{ currentComment.content }}
+    </div>
+  </div>
+  <div class="container">
+    <app-comment-item *ngFor="let reply of currentComment.replies" [currentComment]="reply">
+    </app-comment-item>
+  </div>
+</div>

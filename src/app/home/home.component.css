@@ -12,7 +12,7 @@
 }
 
 .my-middle-row{
-  background: url('../../assets/pictures/homePage/desktop/__home_page - DB_HomePage_2.jpg') no-repeat center center fixed;
+  background: url('/../../assets/pictures/homePage/desktop/__home_page - DB_HomePage_2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -44,7 +44,7 @@
 }
 
 .start-row{
-  background: url('../../assets/pictures/homePage/desktop/DB_HomePage_1.jpg') no-repeat center center fixed;
+  background: url('/../../assets/pictures/homePage/desktop/DB_HomePage_1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -110,7 +110,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 720px)  {
   .start-row{
-    background: url('../../assets/pictures/homePage/mobile/__home_page - DB_HomePage_1.jpg') no-repeat center center fixed;
+    background: url('/../../assets/pictures/homePage/mobile/__home_page - DB_HomePage_1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -141,7 +141,7 @@
   }
 
   .my-middle-row{
-    background: url('../../assets/pictures/homePage/mobile/plates-middle-row.png') no-repeat center center fixed;
+    background: url('/../../assets/pictures/homePage/mobile/plates-middle-row.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

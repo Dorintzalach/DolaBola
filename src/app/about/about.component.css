@@ -1,0 +1,273 @@
+.title {
+  font-family: alegreya-bold;
+  color: #3B3C3C;
+  font-size: 85px;
+  line-height: 8rem;
+}
+
+.open-about-row{
+  background: url('/../../assets/pictures/about/desktop/DB_about_1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 20%;
+  margin: 0;
+}
+
+.my-middle-row{
+  background: url('/../../assets/pictures/about/desktop/DB_about_2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 10% 7% 10% 7%;
+  margin: 0;
+}
+
+.my-paragraph{
+  font-family: alegreya-reg;
+  color: #3B3C3C;
+  font-size: 32px;
+}
+
+.my-col{
+  margin-left: 63%;
+  margin-top: -4%;
+  padding-right: 16%;
+}
+
+.meet-row{
+  background: url('/../../assets/pictures/about/desktop/DB_about_3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 6%;
+  margin: 0;
+}
+
+.meet-col{
+  padding: 6%;
+  margin-left: 5%;
+
+}
+.drop-line-row{
+  background: url('/../../assets/pictures/about/desktop/DB_about_4.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 3%;
+  margin: 0;
+  position: relative;
+}
+
+.drop-line-col{
+  padding: 0 1% 6% 3%;
+  margin-left: 10%;
+}
+
+.drop-line-form{
+  padding: 0 2% 2% 2%;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width:  1224px) and (max-width: 1824px){
+  .drop-line-row{
+    padding: 0%;
+  }
+
+  .drop-line-col{
+    padding: 2% 4% 11% 1%;
+    margin-left: 14%;
+  }
+
+  .my-paragraph{
+    font-size: 21px;
+    font-weight: 300;
+  }
+
+  .title{
+    font-size: 55px;
+  }
+
+  .meet-row{
+    padding: 4% !important;
+  }
+
+  .meet-col{
+    padding: 5%;
+    margin-left: 6%;
+
+  }
+  .my-middle-row{
+    padding: 5.8%;
+    margin: 0;
+    margin-top: 1%;
+    /*margin-bottom: 2%;*/
+    line-height: 1.9rem;
+  }
+
+  .my-col{
+    margin-left: 60%;
+    margin-top: -4%;
+    padding-right: 13%;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  .drop-line-row{
+    padding: 0%;
+  }
+
+  .drop-line-col{
+    padding: 2% 1% 6% 3%;
+    margin-left: 11%;
+  }
+
+
+  .open-about-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 20%;
+    margin: 0;
+  }
+
+
+  .my-middle-row{
+    padding: 4%;
+  }
+
+  .my-col{
+    margin-left: 0;
+    margin-top: 0;
+    padding:1% 1% 1% 7%;
+  }
+
+  .title{
+    font-size: 50px;
+    line-height: 5rem;
+  }
+
+  .my-paragraph{
+    font-size: 20px;
+  }
+
+  .meet-row{
+    padding: 1% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px)  {
+  .open-about-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 45%;
+    margin: 0;
+  }
+
+  .my-middle-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 6% 11% 90% 10%;
+    margin: 0;
+  }
+
+  .my-col{
+    margin-left: 0;
+    margin-top: 0;
+    padding:1% 1% 1% 7%;
+    line-height: 2.5rem;
+  }
+
+  .title{
+    font-size: 70px;
+
+  }
+
+  .my-paragraph{
+    font-size: 28px;
+  }
+
+  .meet-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_3.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 0% 0% 78% 0%;
+    margin: 0;
+  }
+
+  .drop-line-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_4.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 5% 2% 7% 0%;
+  }
+
+  .drop-line-form{
+    padding: 0 0% 3% 0%;
+    margin-left: 7%;
+  }
+}
+
+/*/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .open-about-row{
+    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 20%;
+    margin: 0;
+  }
+
+}

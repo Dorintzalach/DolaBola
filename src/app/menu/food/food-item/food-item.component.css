@@ -1,0 +1,90 @@
+.item-name-row{
+  font-family: alegreya-bold;
+  font-size: 25px;
+  color: #3B3C3C;
+}
+.item-description-row{
+  font-family: alegreya-reg;
+  font-size: 21px;
+  color: #3B3C3C;
+}
+.item-price-row{
+  font-family: alegreya-bold;
+  font-size: 24px;
+  color: #3B3C3C;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1824px){
+  .item-name-row{
+    font-size: 32px;
+  }
+  .item-description-row{
+    font-size: 28px;
+  }
+  .item-price-row{
+    font-size: 32px;
+  }
+
+}
+/* Large devices (laptops/desktops, 992px and up) and (min-width:  1200px) */
+@media only screen and (max-width: 1350px) {
+  .item-name-row{
+    font-size: 21px;
+  }
+  .item-description-row{
+    font-size: 17px;
+  }
+  .item-price-row{
+    font-size: 20px;
+  }
+}
+
+/*!* Large devices (laptops/desktops, 992px and up) *!*/
+/*@media only screen and (max-width: 1200px) and (min-width: 768px){*/
+/*  .item-name-row{*/
+/*    font-flaticon-size: 21px;*/
+/*  }*/
+/*  .item-description-row{*/
+/*    font-flaticon-size: 17px;*/
+/*  }*/
+/*  .item-price-row{*/
+/*    font-flaticon-size: 20px;*/
+/*  }*/
+/*}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px)  {
+  .main-row{
+    padding: 2%;
+    /*margin: 4%;*/
+  }
+
+  .item-name-row{
+    font-size: 24px;
+  }
+  .item-description-row{
+    font-size: 22px;
+  }
+  .item-price-row{
+    font-size: 20px;
+  }
+}
+
+/*/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-row{
+    padding: 2%;
+    margin: 2%;
+  }
+
+  .item-name-row{
+    font-size: 22px;
+  }
+  .item-description-row{
+    font-size: 20px;
+  }
+  .item-price-row{
+    font-size: 20px;
+  }
+}
+
