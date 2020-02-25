@@ -23,7 +23,10 @@
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
+    "nativescript-ng-shadow": "^2.1.0",
+    "ng2-page-scroll": "^4.0.0-beta.12",
     "ngx-gallery": "^5.10.0",
+    "ngx-page-scroll": "^7.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

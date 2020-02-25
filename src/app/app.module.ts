@@ -28,6 +28,7 @@ import { WhatYouThinkFormComponent } from './blog/blog-item-detail/what-you-thin
 import { CommentsComponent } from './blog/blog-item-detail/comments/comments.component';
 import { CommentItemComponent } from './blog/blog-item-detail/comments/comment-item/comment-item.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     AppRoutingModule,
     FormsModule,
     NgxGalleryModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    Ng2PageScrollModule
+    // FragmentPolyModule.forRoot()({})
   ],
 
   providers: [],

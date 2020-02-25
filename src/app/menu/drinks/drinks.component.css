@@ -1,0 +1,40 @@
+.start-col {
+  background: url('../../../assets/pictures/menu/drinks/desktop/drinks_img.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 18%;
+  max-width: 99.5%;
+}
+
+.title-col{
+  padding: 1%;
+  align-items: end;
+  margin-top: 3%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px)  {
+  .start-col{
+    background: url('../../../assets/pictures/menu/drinks/mobile/DB_Mobile_Menu_3.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 50%;
+    max-width: 99.5%;
+    margin-top: 3%;
+  }
+
+  .title-col{
+    padding: 2%;
+    margin-bottom: 4%;
+  }
+}

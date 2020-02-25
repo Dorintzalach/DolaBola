@@ -1,4 +1,6 @@
-
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-size: 65px;
+}
 .put-some-dola{
   width: 40%;
   height: auto;

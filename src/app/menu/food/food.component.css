@@ -1,0 +1,58 @@
+.start-col {
+  background: url('../../../assets/pictures/menu/food/desktop/plates_img.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: local;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 15%;
+  max-width: 99.5%;
+}
+
+.title-col{
+  padding: 1%;
+  align-items: end;
+  margin-top: 3%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1350px) and (min-width:  1200px){
+  .start-col{
+
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) and (min-width: 768px){
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px)  {
+  .start-col {
+    background: url('src/assets/pictures/menu/food/mobile/DB_Mobile_Menu_1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: local;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 50%;
+    max-width: 99.5%;
+  }
+
+  .title-col{
+    padding: 2%;
+    margin-bottom: 4%;
+  }
+}
+
+/*/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .title-col{
+    padding: 4%;
+    margin-bottom: 4%;
+  }
+}
