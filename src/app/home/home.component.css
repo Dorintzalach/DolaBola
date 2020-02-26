@@ -5,6 +5,7 @@
   width: 40%;
   height: auto;
   margin-left: 3%;
+  z-index: 0;
 }
 
 .title{
@@ -59,6 +60,7 @@
   flex-direction: row-reverse;
   display: flex;
   justify-content: flex-start;
+  z-index: -1;
 }
 
 .mobile-show{

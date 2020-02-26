@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
     private readonly meta: Meta
   ) { }
   title = 'DolaBola';
+  // menuState: any;
 
   ngOnInit(): void {
     timer(5000).subscribe(() => {

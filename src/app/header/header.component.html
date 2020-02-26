@@ -1,24 +1,56 @@
 <nav class="navbar fixed-top">
-  <a href="#" class="navbar-brand">
+  <a href="#" class="navbar-brand" routerLink="">
     <img [src]="leftIcon" class="img-fluid responsive db-icon">
   </a>
-  <button class="navbar-toggler menu-class" data-toggle="collapse" (click)="toggleNavbar()">
+  <button class="navbar-toggler" data-toggle="collapse" (click)="toggleNavbar()">
     <span>
-      <img [src]="rightIcon" width="60%" height="60%" class="img-fluid responsive menu-icon">
+      <img [src]="rightIcon" class="img-fluid responsive menu-icon">
     </span>
   </button>
-  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="#" class="nav-link list-items">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link list-items">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link list-items">Menu</a>
-      </li>
-    </ul>
+  <div class="collapse navbar-collapse" [@slideInOut]="menuState" [ngClass]="{ 'show': navbarOpen }">
+    <div class="side left-menu">
+    </div>
+    <div class="side right-menu">
+      <div class="row justify-content-end">
+        <div class="col-2 flaticon-close" (click)="toggleNavbar()">
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a class="menu-ancor justify-content-center" routerLink="/about" >ABOUT</a>
+        </li>
+        <li>
+          <a class="menu-ancor justify-content-center" routerLink="/blog">BLOG</a>
+        </li>
+        <li>
+          <a class="menu-ancor justify-content-center" routerLink="/menu">MENU</a>
+        </li>
+      </ul>
+      <div class="row justify-content-around align-items-center" style="margin-left: 8%;">
+        <div class="col-2">
+        </div>
+        <div class="col-3 connection-details">
+          <div class="row">
+            <div class="flaticon-call">
+            </div>
+            <p>
+              +526951995
+            </p>
+          </div>
+        </div>
+        <div class="col-3 connection-details">
+          <div class="row">
+            <div class="flaticon-maps-and-flags">
+            </div>
+            <p>
+              Beit Nehamia
+            </p>
+          </div>
+        </div>
+        <div class="col-2">
+        </div>
+      </div>
+    </div>
   </div>
 </nav>
 

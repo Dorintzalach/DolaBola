@@ -29,6 +29,7 @@ import { CommentsComponent } from './blog/blog-item-detail/comments/comments.com
 import { CommentItemComponent } from './blog/blog-item-detail/comments/comment-item/comment-item.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -62,8 +63,8 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
     FormsModule,
     NgxGalleryModule,
     AngularFontAwesomeModule,
-    Ng2PageScrollModule
-    // FragmentPolyModule.forRoot()({})
+    Ng2PageScrollModule,
+    BrowserAnimationsModule
   ],
 
   providers: [],

@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-header',
@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+    this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
 
   @HostListener("window:scroll", [])
@@ -39,4 +40,10 @@ export class HeaderComponent implements OnInit {
     this.leftIcon = '/../../assets/pictures/header/DB_black.png';
     this.rightIcon = '/../../assets/pictures/header/HEADER_black.png';
   }
+
+  // @HostListener('window:click', ['$event'])
+  // documentClick(event: MouseEvent) {
+  //   this.menuState = 'in';
+  //   this.navbarOpen = false;
+  // }
 }
