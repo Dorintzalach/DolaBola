@@ -2,18 +2,17 @@
   <a href="#" class="navbar-brand" routerLink="">
     <img [src]="leftIcon" class="img-fluid responsive db-icon">
   </a>
-  <button class="navbar-toggler" data-toggle="collapse" (click)="toggleNavbar()">
-    <span>
-      <img [src]="rightIcon" class="img-fluid responsive menu-icon">
-    </span>
+  <button class="hamburger hamburger--collapse" type="button" data-toggle="collapse" (click)="toggleNavbar()" [ngClass]="{'is-active': navbarOpen}">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
   </button>
   <div class="collapse navbar-collapse" [@slideInOut]="menuState" [ngClass]="{ 'show': navbarOpen }">
     <div class="side left-menu">
+      <img src="/../../assets/pictures/header/menu_2.jpg">
     </div>
     <div class="side right-menu">
       <div class="row justify-content-end">
-        <div class="col-2 flaticon-close" (click)="toggleNavbar()">
-        </div>
       </div>
       <ul>
         <li>
