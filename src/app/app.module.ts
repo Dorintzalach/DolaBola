@@ -64,7 +64,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     NgxGalleryModule,
     AngularFontAwesomeModule,
     Ng2PageScrollModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    // NgbDropdownModule.forRoot()
   ],
 
   providers: [],

@@ -2,12 +2,12 @@
   background-color: transparent;
   margin: 0;
   position: fixed;
-  z-index: 100;
+  z-index: 10;
 }
 
 .hamburger {
-  color: white;
-  z-index: 1000;
+  color: #3B3C3C !important;
+  z-index: 10;
 }
 
 .list-items{
@@ -56,13 +56,24 @@ button{
 .menu-ancor{
   color: #3B3C3C;
   font-size: 50px;
-  margin-left: 38%;
+  /*margin-left: 38%;*/
   /*position: fixed;*/
+  /*justify-content: start;*/
+  /*align-items: start;*/
 }
+/*.menu-ancor:hover{*/
+/*  color: white;*/
+/*}*/
 
 ul{list-style-type:none;
 margin: auto;
-  opacity: unset;
+  padding-top: 20%;
+  padding-left: 42%;
+  padding-right: 40%;
+}
+
+li{
+  padding-bottom: 2%;
 }
 
 .show{
@@ -72,7 +83,7 @@ margin: auto;
   right: 0;
   bottom: 0;
   min-width: 100%;
-  z-index: 9999;
+  z-index: 5;
   font-family: alegreya-reg, Helvetica, sans-serif;
 }
 
@@ -83,6 +94,11 @@ margin: auto;
 .flaticon-close{
   top: 10px;
 }
+.connection-details{
+  font-size: 25px;
+  font-family: alegreya-reg;
+}
+
 .connection-details{
   font-size: 25px;
   font-family: alegreya-reg;
@@ -110,4 +126,20 @@ margin: auto;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
+}
+
+
+.navbar-toggler:focus {
+  outline: none;
+  background: transparent !important;
+}
+
+.network{
+  padding: 4% 1% 0% 1%;
+}
+.detail-connection{
+  padding-left: 45%;
+}
+.network-details{
+  padding-bottom: 1%;
 }
