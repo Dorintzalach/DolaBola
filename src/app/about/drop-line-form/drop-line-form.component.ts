@@ -15,4 +15,7 @@ export class DropLineFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendMessage() {
+
+  }
 }

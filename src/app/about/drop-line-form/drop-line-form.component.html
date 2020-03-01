@@ -21,10 +21,8 @@
     </div>
   </div>
   <div class="row justify-content-end align-items-end">
-
     <div class="col-5 col-xs-5 col-sm-5">
-      <button class="btn my-btn" [disabled]="((!message.valid) || (!fullName.valid) || (!message.valid))">Send Message</button>
+      <button class="btn my-btn" [disabled]="((!message.valid) || (!fullName.valid) || (!message.valid))" (click)="sendMessage()">Send Message</button>
     </div>
-
   </div>
 </form>

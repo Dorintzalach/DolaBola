@@ -36,10 +36,29 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
   font-size: 15px;
 }
+@media only screen and (min-width: 1820px) {
+
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 18px;
+    margin-left: 24px;
+  }
+
+  .comments-title{
+    font-size: 35px;
+  }
+
+  .container-B {
+    margin-top: 0.7%;
+    /*margin-left: -1%;*/
+  }
+
+  .container-A {
+    margin-top: 0.7%;
+  }
+}
 
 @media only screen and (max-width: 720px) {
   .comments-container{
-    /*margin-top: 5%;*/
     padding: 7% 0% 7% 7%;
   }
 
