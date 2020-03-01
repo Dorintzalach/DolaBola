@@ -13,6 +13,10 @@
   object-fit: cover;
 }
 
+.likes{
+  cursor: pointer;
+}
+
 .icons-col{
   padding: 0;
 }

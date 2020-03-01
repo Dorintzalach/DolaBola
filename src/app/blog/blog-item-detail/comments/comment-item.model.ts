@@ -1,6 +1,6 @@
 export class CommentItem {
   owner: string;
-  date: string;
+  date: number;
   replies: CommentItem[];
   content: string;
 }

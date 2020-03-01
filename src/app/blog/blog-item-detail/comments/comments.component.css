@@ -3,23 +3,27 @@
   width: 100%;
   margin-top: 5%;
   padding: 2%;
+  padding-left: 4%;
+  margin-left: -1%;
 }
 
 .comments-title{
   font-family: alegreya-bold;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 500;
 }
 
 .container-B {
-  margin-top: 9px;
-  margin-left: 0px;
+  margin-top: 0.8%;
+  margin-left: -2%;
 }
 
 .container-A {
-  margin-top: 9px;
-  margin-left: 0px;
+  margin-left: -2%;
+  margin-top: 0.8%;
 }
+
+
 /* resize images */
 .container img {
   width: 100%;
@@ -30,7 +34,7 @@
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-  margin-left: 7px;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 720px) {

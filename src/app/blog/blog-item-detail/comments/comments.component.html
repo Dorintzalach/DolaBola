@@ -10,7 +10,7 @@
     </div>
     <div class="comments-div" *ngIf="commentsOpen">
       <app-comment-item
-        *ngFor="let comment of currentBlogItem.comments" [currentComment]="comment">
+        *ngFor="let comment of currentBlogItem.comments; let i = index" [currentComment]="comment" [currentBlogItemId]="currentBlogItemId" [currentCommentId]="i">
       </app-comment-item>
     </div>
   </div>

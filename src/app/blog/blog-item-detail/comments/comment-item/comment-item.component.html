@@ -2,12 +2,12 @@
 <div class="comments-container">
   <div class="row justify-content-between">
     <div class="col-6 date-comment-row">
-      {{ currentComment.date }}
+      {{ currentComment.date | date: "longDate"}}
       by
       {{ currentComment.owner}}
     </div>
     <div class="col-2 col-sm-3 col-xs-3">
-      <div class="date-comment-row">
+      <div class="date-comment-row reply" (click)="setReply()">
         <img src="assets/pictures/blog/comment.png" class="icon-img"/>
         Reply
       </div>
@@ -28,5 +28,7 @@
   <div class="container">
     <app-comment-item *ngFor="let reply of currentComment.replies" [currentComment]="reply">
     </app-comment-item>
+    <app-reply-comment *ngIf="replied" (submitReply)="reply($event)">
+    </app-reply-comment>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {BlogItem} from '../blog-item.model';
 import {BlogService} from '../blog.service';
 import {ActivatedRoute, Params} from '@angular/router';
+import {CommentItem} from './comments/comment-item.model';
 
 @Component({
   selector: 'app-blog-item-detail',
@@ -17,9 +18,16 @@ export class BlogItemDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
-      console.log(this.id);
       this.currentBlogItem = this.blogService.getBlogItem(this.id);
     });
   }
 
+  likeBlogItem() {
+    this.currentBlogItem.likes = this.currentBlogItem.likes + 1;
+  }
+
+  onPosted($event: CommentItem) {
+    this.blogService.setComment(this.id, $event);
+    this.currentBlogItem.comments.push($event);
+  }
 }

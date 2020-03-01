@@ -12,6 +12,7 @@ export class CommentsComponent implements OnInit {
   openArrow: string;
   closeArrow: string;
   @Input() currentBlogItem: BlogItem;
+  @Input() currentBlogItemId: number;
   commentsOpen: boolean;
 
   constructor() {

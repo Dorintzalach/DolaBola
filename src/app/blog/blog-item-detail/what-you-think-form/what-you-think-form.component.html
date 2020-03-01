@@ -1,21 +1,21 @@
-<form class="my-form-group">
+<form class="my-form-group" [formGroup]="whatYouThinkForm">
   <div class="form-group">
     <div class="row">
       <div class="col-md-12">
-        <input placeholder="NickName" required ngModel name="NickName"  #nickName="ngModel" id="NickName" type="text" class="my-form-input">
+        <input placeholder="nickName" formControlName="nickName" required ngModel name="nickName" id="NickName" type="text" class="my-form-input">
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="row">
       <div class="col-md-12">
-        <input placeholder="Comment" required ngModel name="Comment"  #comment="ngModel" id="Comment" type="text" class="my-form-input">
+        <input placeholder="Comment" formControlName="comment" required ngModel name="Comment" id="Comment" type="text" class="my-form-input">
       </div>
     </div>
   </div>
   <div class="row justify-content-end">
     <div class="col-7">
-      <button class="btn my-btn" [disabled]="((!comment.valid) || (!nickName.valid))">Post Comment</button>
+      <button class="btn my-btn" [disabled]="!whatYouThinkForm.valid"  (click)="postComment()">Post Comment</button>
     </div>
   </div>
 </form>

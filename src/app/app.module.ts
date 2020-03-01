@@ -17,7 +17,7 @@ import { DrinkItemListComponent } from './menu/drinks/drink-item-list/drink-item
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { DropLineFormComponent } from './about/drop-line-form/drop-line-form.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BlogComponent } from './blog/blog.component';
 import { BlogItemListComponent } from './blog/blog-item-list/blog-item-list.component';
 import { BlogItemComponent } from './blog/blog-item-list/blog-item/blog-item.component';
@@ -30,6 +30,7 @@ import { CommentItemComponent } from './blog/blog-item-detail/comments/comment-i
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ReplyCommentComponent } from './blog/blog-item-detail/comments/comment-item/reply-comment/reply-comment.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     WhatYouThinkFormComponent,
     CommentsComponent,
     CommentItemComponent,
+    ReplyCommentComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFontAwesomeModule,
     Ng2PageScrollModule,
     BrowserAnimationsModule,
-    // NgbDropdownModule.forRoot()
+    ReactiveFormsModule
   ],
 
   providers: [],

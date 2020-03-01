@@ -1,0 +1,24 @@
+<hr>
+<div class="reply-container">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <input placeholder="nickName" #replyNickName="ngModel" required ngModel name="nickName" type="text" class="my-form-input">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <input placeholder="Comment" #replyComment="ngModel" required ngModel name="Comment" type="text" class="my-form-input">
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-3">
+    </div>
+    <div class="col-9">
+      <button class="btn my-btn" [disabled]="!replyNickName.valid || !replyComment.valid"  (click)="postComment(true, replyNickName, replyComment)">Reply</button>
+    </div>
+  </div>
+</div>

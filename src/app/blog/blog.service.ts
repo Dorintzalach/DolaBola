@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {BlogItem} from './blog-item.model';
+import {CommentItem} from './blog-item-detail/comments/comment-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,10 @@ export class BlogService {
   private blogItems: BlogItem[];
 
   constructor() {
+    // this.blogItems = new BlogItem[]();
     this.blogItems = [
       {
-        title: 'BREAKFAST MUESLI', date: 'February 3, 2019', likes: 44, comments: [],
+        title: 'BREAKFAST MUESLI', date:  Date.now(), likes: 44, comments: [],
         description: '5 minutes for getting yourself a delicious breakfast',
         imagePath: '../../assets/pictures/blog/blog-items/muesli.jpg',
         content: [{
@@ -34,7 +36,7 @@ export class BlogService {
         ]
       },
       {
-        title: 'CABBAGE RECIPES', date: 'February 14, 2019', likes: 54, comments: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
+        title: 'CABBAGE RECIPES', date:  Date.now(), likes: 54, comments: [{owner: 'Ray Gold', date:  Date.now(), replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
         description: 'Cabbage leftovers for lunch',
         imagePath: '../../assets/pictures/blog/blog-items/cabbage.jpg',
         content: [{
@@ -57,7 +59,7 @@ export class BlogService {
         ]
       },
       {
-        title: 'PLATES & BETWEEN', date: 'February 29, 2019', likes: 25, comments: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
+        title: 'PLATES & BETWEEN', date:  Date.now(), likes: 25, comments: [{owner: 'Ray Gold', date:  Date.now(), replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
         description: ' In a world full of shapes, colors and patterns, you can’t be boring',
         imagePath: '../../assets/pictures/blog/blog-items/plates-between.jpg',
         content: [{
@@ -80,7 +82,7 @@ export class BlogService {
         ]
       },
       {
-        title: 'PINK LADY COCKTAIL', date: 'January 27, 2019', likes: 80, comments: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
+        title: 'PINK LADY COCKTAIL', date:  Date.now(), likes: 80, comments: [{owner: 'Ray Gold', date:  Date.now(), replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
         description: 'Every cocktail needs some pinky powder to be magical',
         imagePath: '../../assets/pictures/blog/blog-items/pink-lady-cocktail.jpg',
         content: [{
@@ -103,7 +105,7 @@ export class BlogService {
         ]
       },
       {
-        title: 'KITCHEN APGRADE', date: 'January 10, 2019', likes: 39, comments: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
+        title: 'KITCHEN APGRADE', date:  Date.now(), likes: 39, comments: [{owner: 'Ray Gold', date: Date.now(), replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
         description: '20 new products you must heard of before everyone!',
         imagePath: '../../assets/pictures/blog/blog-items/kitchen-apgrade.jpg',
         content: [{
@@ -122,7 +124,7 @@ export class BlogService {
         ]
       },
       {
-        title: 'OH MY PIE', date: 'January 2, 2019', likes: 97, comments: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [{owner: 'Ray Gold', date: 'January 2, 2019', replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
+        title: 'OH MY PIE', date:  Date.now(), likes: 97, comments: [{owner: 'Ray Gold', date:  Date.now(), replies: [{owner: 'Ray Gold', date:  Date.now(), replies: [], content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
           content: 'Thank you for the test results. I am a big fan of Barilla GF pasta. I am going try your winner, but I admit am not a fan of anything with soy as an ingredient.' }],
         description: '20 new products you must heard of before everyone!',
         imagePath: '../../assets/pictures/blog/blog-items/my-pie.jpg',
@@ -151,5 +153,15 @@ export class BlogService {
 
   getBlogItem(id): BlogItem {
     return this.blogItems[id];
+  }
+
+  setComment(id: number, comment: CommentItem) {
+    this.blogItems[id].comments.push(comment);
+  }
+
+  setReplyToComment(blogItemId: number, commentItemId: number, reply: CommentItem) {
+    console.log(blogItemId);
+    console.log(commentItemId);
+    this.blogItems[blogItemId].comments[commentItemId].replies.push(reply);
   }
 }

@@ -21,8 +21,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class HeaderComponent implements OnInit {
   menuState = 'out';
   navbarOpen = false;
-  leftIcon = '/../../assets/pictures/header/DB_white.png';
-  rightIcon = '/../../assets/pictures/header/header_white.png';
+  leftIcon = '/../../assets/pictures/header/DB_black.png';
 
   constructor() { }
 
@@ -34,16 +33,4 @@ export class HeaderComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
-
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    this.leftIcon = '/../../assets/pictures/header/DB_black.png';
-    this.rightIcon = '/../../assets/pictures/header/HEADER_black.png';
-  }
-
-  // @HostListener('window:click', ['$event'])
-  // documentClick(event: MouseEvent) {
-  //   this.menuState = 'in';
-  //   this.navbarOpen = false;
-  // }
 }

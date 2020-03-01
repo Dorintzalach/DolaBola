@@ -2,27 +2,27 @@
   <a href="#" class="navbar-brand" routerLink="">
     <img [src]="leftIcon" class="img-fluid responsive db-icon">
   </a>
-  <button class="hamburger hamburger--collapse navbar-toggler collapsed" data-toggle="collapse" type="button" (click)="toggleNavbar()" [ngClass]="{'is-active': navbarOpen}">
+  <button class="hamburger hamburger--collapse navbar-toggler collapsed" data-toggle="collapse" type="button" (click)="toggleNavbar()" [ngClass]="{'is-active': navbarOpen}" style="font-size: 15px">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
   </button>
   <div class="collapse navbar-collapse" id="navbarColl" [@slideInOut]="menuState" [ngClass]="{ 'show': navbarOpen }">
-    <div class="side left-menu">
-      <img src="/../../assets/pictures/header/menu_2.jpg">
+    <div class="side left-menu ">
+      <img class="img-fluid" src="/../../assets/pictures/header/menu_2.jpg">
     </div>
-    <div class="side right-menu">
+    <div class="side right-menu" (click)="toggleNavbar()">
       <div class="row">
       </div>
       <ul>
         <li>
-          <a class="menu-ancor" routerLink="/menu">Menu</a>
+          <a class="menu-ancor" pageScroll pageScrollDuration="1" href="#top" routerLink="/menu">Menu</a>
         </li>
         <li>
-          <a class="menu-ancor" routerLink="/about">About</a>
+          <a class="menu-ancor" pageScroll pageScrollDuration="1" href="#top"  routerLink="/about">About</a>
         </li>
         <li>
-          <a class="menu-ancor" routerLink="/blog">Blog</a>
+          <a class="menu-ancor" pageScroll pageScrollDuration="1" href="#top" routerLink="/blog">Blog</a>
         </li>
       </ul>
       <div class="detail-connection">
@@ -34,37 +34,17 @@
         </div>
         <div class="row">
           <div class="col-1 network">
-            <img src="../../assets/pictures/footer/instagram-icon.png" class="img-fluid">
+            <a href="https://www.instagram.com/_halodesign_/">
+              <img src="../../assets/pictures/footer/instagram-icon.png" class="img-fluid">
+            </a>
           </div>
           <div class="col-1 network">
-            <img src="../../assets/pictures/footer/facebook-icon.png" class="img-fluid" style="height: 24px">
+            <a href="https://www.facebook.com/HalooDesign/">
+              <img src="../../assets/pictures/footer/facebook-icon.png" class="img-fluid" style="height: 24px">
+            </a>
           </div>
         </div>
       </div>
-<!--      <div class="row justify-content-around align-items-center" style="margin-left: 8%;">-->
-<!--        <div class="col-2">-->
-<!--        </div>-->
-<!--        <div class="col-4 connection-details">-->
-<!--          <div class="row">-->
-<!--            <div class="flaticon-call">-->
-<!--            </div>-->
-<!--            <p>-->
-<!--              +526951995-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="col-4 connection-details">-->
-<!--          <div class="row">-->
-<!--            <div class="flaticon-maps-and-flags">-->
-<!--            </div>-->
-<!--            <p>-->
-<!--              Beit Nehamia-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="col-2">-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
   </div>
 </nav>

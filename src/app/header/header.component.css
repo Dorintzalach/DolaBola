@@ -19,7 +19,7 @@ button{
   outline:none;
 }
 .db-icon{
-  height: 70px;
+  height: 63px;
 }
 
 .menu-icon{
@@ -53,17 +53,15 @@ button{
   background: #F9CAD2;
 }
 
-.menu-ancor{
+.menu-ancor:hover{
   color: #3B3C3C;
-  font-size: 50px;
-  /*margin-left: 38%;*/
-  /*position: fixed;*/
-  /*justify-content: start;*/
-  /*align-items: start;*/
 }
-/*.menu-ancor:hover{*/
-/*  color: white;*/
-/*}*/
+
+.menu-ancor{
+  color: black;
+  font-size: 50px;
+}
+
 
 ul{list-style-type:none;
 margin: auto;
@@ -142,4 +140,6 @@ li{
 }
 .network-details{
   padding-bottom: 1%;
+}
+.img-fluid{
 }

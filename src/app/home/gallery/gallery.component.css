@@ -8,3 +8,17 @@
 /*  left: 0;*/
 /*}*/
 
+.flaticon-close:before{
+  font-size: 15px;
+}
+
+/*[class^="flaticon-close"]:before, [class*=" flaticon-close"]:before, [class^="flaticon-close"]:after, [class*=" flaticon-close"]:after {*/
+/*  font-family: Flaticon;*/
+/*  font-size: 15px;*/
+/*  font-style: normal;*/
+/*  !*margin-left: 20px;*!*/
+/*}*/
+
+[class^="flaticon-close"]:before, [class*="flaticon-close"]:before, [class^="flaticon-close"]:after, [class*="flaticon-close"]:after {
+  font-size: 15px;
+}

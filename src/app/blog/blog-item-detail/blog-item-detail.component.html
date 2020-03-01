@@ -5,13 +5,13 @@
     </div>
     <div class="row justify-content-between my-detail-row">
       <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
-        {{ currentBlogItem.date }}
+        {{ currentBlogItem.date | date: "longDate"}}
       </div>
-      <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
+      <div class="col-md-4 col-sm-6 col-xs-6 detail-col" (click)="likeBlogItem()">
         <div class="row justify-content-end align-items-md-center">
-          <div class="col-md-2  col-sm-2 col-xs-2 icons-col">
-            <img src="assets/pictures/blog/like.png" class="icon-img"/>
-            {{ currentBlogItem.likes }}
+          <div class="col-md-2  col-sm-2 col-xs-2 icons-col likes">
+              <img src="assets/pictures/blog/like.png" class="icon-img"/>
+              {{ currentBlogItem.likes }}
           </div>
           <div class="col-md-2 col-sm-2 col-xs-2  icons-col">
             <img src="assets/pictures/blog/comment.png" class="icon-img"/>
@@ -51,10 +51,10 @@
         <h3 class="title-3">
           Let us Know what you think
         </h3>
-        <app-what-you-think-form></app-what-you-think-form>
+        <app-what-you-think-form (posted)="onPosted($event)"></app-what-you-think-form>
       </div>
     </div>
-    <app-comments [currentBlogItem]="currentBlogItem"></app-comments>
+    <app-comments [currentBlogItem]="currentBlogItem" [currentBlogItemId]="id"></app-comments>
   </div>
   <div class="col-md-4 col-blog-item">
     <div class="row">
