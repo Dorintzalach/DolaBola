@@ -31,6 +31,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReplyCommentComponent } from './blog/blog-item-detail/comments/comment-item/reply-comment/reply-comment.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { ReplyCommentComponent } from './blog/blog-item-detail/comments/comment-
     AngularFontAwesomeModule,
     Ng2PageScrollModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
 
   providers: [],

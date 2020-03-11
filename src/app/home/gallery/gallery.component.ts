@@ -29,7 +29,8 @@ export class GalleryComponent implements OnInit {
     this.galleryOptions = [
       {
         width: '100%',
-        height: '400px',
+        height: '350px',
+        // fullWidth: true,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
         image: false,
@@ -39,8 +40,8 @@ export class GalleryComponent implements OnInit {
         arrowNextIcon: 'flaticon-right-arrow',
         closeIcon: 'flaticon-close',
         fullscreenIcon: 'fa fa-arrows',
-        // spinnerIcon: 'fa fa-refresh fa-spin fa-3x fa-fw',
-        // previewFullscreen: true
+        imageInfinityMove: true,
+        imageBullets: true,
       },
       // max-width 800
       {

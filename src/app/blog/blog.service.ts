@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BlogItem} from './blog-item.model';
 import {CommentItem} from './blog-item-detail/comments/comment-item.model';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,9 @@ import {CommentItem} from './blog-item-detail/comments/comment-item.model';
 
 export class BlogService {
   private blogItems: BlogItem[];
+  private serverUrl = 'http://127.0.0.1:5000/';
 
-  constructor() {
-    // this.blogItems = new BlogItem[]();
+  constructor(private http: HttpClient) {
     this.blogItems = [
       {
         title: 'BREAKFAST MUESLI', date:  Date.now(), likes: 44, comments: [],
@@ -148,6 +149,7 @@ export class BlogService {
   }
 
   getBlogItems(): BlogItem[] {
+    // this.blogItems =
     return this.blogItems.slice();
   }
 

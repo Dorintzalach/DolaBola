@@ -8,6 +8,7 @@
 .hamburger {
   color: #3B3C3C !important;
   z-index: 10;
+  font-size: 10px !important;
 }
 
 .list-items{
@@ -55,6 +56,7 @@ button{
 
 .menu-ancor:hover{
   color: #3B3C3C;
+  text-underline: none;
 }
 
 .menu-ancor{
@@ -68,6 +70,10 @@ margin: auto;
   padding-top: 20%;
   padding-left: 42%;
   padding-right: 40%;
+}
+
+a, u {
+  text-decoration: none !important;
 }
 
 li{
@@ -106,6 +112,7 @@ li{
   left: 0;
   min-width: 100%;
   top: 0;
+  background: url("/../../assets/pictures/header/menu_2.jpg");
 }
 
 .right-menu{
@@ -140,6 +147,11 @@ li{
 }
 .network-details{
   padding-bottom: 1%;
+  color: black;
+}
+
+.network-details:hover{
+  color: #3B3C3C;
 }
 .img-fluid{
 }

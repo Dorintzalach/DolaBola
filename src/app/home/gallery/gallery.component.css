@@ -12,12 +12,14 @@
   font-size: 15px;
 }
 
-/*[class^="flaticon-close"]:before, [class*=" flaticon-close"]:before, [class^="flaticon-close"]:after, [class*=" flaticon-close"]:after {*/
-/*  font-family: Flaticon;*/
-/*  font-size: 15px;*/
-/*  font-style: normal;*/
-/*  !*margin-left: 20px;*!*/
-/*}*/
+.ngx-gallery-thumbnail-size-cover[_ngcontent-rvi-c12] .ngx-gallery-thumbnails[_ngcontent-rvi-c12] .ngx-gallery-thumbnail[_ngcontent-rvi-c12] {
+
+}
+
+[_nghost-nud-c5] .ngx-gallery-icons-wrapper:before{
+  -moz-box-shadow: 1px 1px 5px #999;
+  -webkit-box-shadow: 1px 1px 5px #999;
+  box-shadow: 1px 1px 5px #999;}
 
 [class^="flaticon-close"]:before, [class*="flaticon-close"]:before, [class^="flaticon-close"]:after, [class*="flaticon-close"]:after {
   font-size: 15px;
