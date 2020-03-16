@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogItem} from '../blog-item.model';
 import {BlogService} from '../blog.service';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog-item-list',
@@ -8,14 +9,19 @@ import {BlogService} from '../blog.service';
   styleUrls: ['./blog-item-list.component.css']
 })
 export class BlogItemListComponent implements OnInit {
-  private blogItems: BlogItem[];
+  blogItems: BlogItem[] = null;
   orderedItems = [];
+  observer$ = this.blogService.data$;
+
 
   constructor(private blogService: BlogService) {}
 
   ngOnInit() {
-    this.blogItems = this.blogService.getBlogItems();
-    this.setNumberOfItemsPerRow(3);
+    this.blogService.getBlogItems();
+    this.observer$.subscribe(data => {
+        this.blogItems = data;
+        this.setNumberOfItemsPerRow(3);
+    });
   }
 
   private setNumberOfItemsPerRow( k: number) {

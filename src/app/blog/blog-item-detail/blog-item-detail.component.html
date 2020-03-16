@@ -1,70 +1,77 @@
-<div class="row main-row">
-  <div class="col-md-8 col-blog-item">
-    <div class="row img-row">
-      <img [src]="currentBlogItem.imagePath" class="img-fluid blog-item-img"/>
-    </div>
-    <div class="row justify-content-between my-detail-row">
-      <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
-        {{ currentBlogItem.date | date: "longDate"}}
+<div *ngIf="currentBlogItem">
+  <div class="row main-row">
+    <div class="col-md-8 col-blog-item">
+      <div class="row img-row">
+        <img [src]="currentBlogItem.imagePath" class="img-fluid blog-item-img"/>
       </div>
-      <div class="col-md-4 col-sm-6 col-xs-6 detail-col" (click)="likeBlogItem()">
-        <div class="row justify-content-end align-items-md-center">
-          <div class="col-md-2  col-sm-2 col-xs-2 icons-col likes">
+      <div class="row justify-content-between my-detail-row">
+        <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
+          {{ currentBlogItem.date | date: "longDate"}}
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 detail-col" (click)="likeBlogItem()">
+          <div class="row justify-content-end align-items-md-center">
+            <div class="col-md-2  col-sm-2 col-xs-2 icons-col likes">
               <img src="assets/pictures/blog/like.png" class="icon-img"/>
               {{ currentBlogItem.likes }}
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2  icons-col">
-            <img src="assets/pictures/blog/comment.png" class="icon-img"/>
-            {{ currentBlogItem.comments.length }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="all-details">
-      <div class="row">
-        <h2 class="title">
-          {{ currentBlogItem.content[0].title }}
-        </h2>
-      </div>
-      <div class="row">
-        <p class="desc-p">
-          {{ currentBlogItem.content[0].desc}}
-        </p>
-      </div>
-      <div *ngFor="let i=index ;let detail of currentBlogItem.content">
-        <div *ngIf="i>0">
-          <div class="row blog-item-content">
-            <h2 class="content-title">
-              {{ currentBlogItem.content[i].title }}
-            </h2>
-          </div>
-          <div class="row">
-            <p class="content-desc-p">
-              {{ currentBlogItem.content[i].desc}}
-            </p>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2  icons-col">
+              <img src="assets/pictures/blog/comment.png" class="icon-img"/>
+              <div *ngIf="currentBlogItem.comments; else zero">
+                {{ currentBlogItem.comments.length }}
+              </div>
+              <ng-template #zero>
+                0
+              </ng-template>
+            </div>
           </div>
         </div>
       </div>
+      <div class="all-details">
+        <div class="row">
+          <h2 class="title">
+            {{ currentBlogItem.content[0].title}}
+          </h2>
+        </div>
+        <div class="row">
+          <p class="desc-p">
+            {{ currentBlogItem.content[0].desc}}
+          </p>
+        </div>
+        <div *ngFor="let i=index ;let detail of currentBlogItem.content">
+          <div *ngIf="i>0">
+            <div class="row blog-item-content">
+              <h2 class="content-title">
+                {{ currentBlogItem.content[i].title }}
+              </h2>
+            </div>
+            <div class="row">
+              <p class="content-desc-p">
+                {{ currentBlogItem.content[i].desc}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-row">
+        <div class="col-md-7 let-us-know-col">
+          <h3 class="title-3">
+            Let us Know what you think
+          </h3>
+          <app-what-you-think-form (posted)="onPosted($event)"></app-what-you-think-form>
+        </div>
+      </div>
+      <app-comments [currentBlogItem]="currentBlogItem" [currentBlogItemId]="id"></app-comments>
     </div>
-    <div class="row form-row">
-      <div class="col-md-7 let-us-know-col">
-        <h3 class="title-3">
-          Let us Know what you think
+    <div class="col-md-4 col-blog-item">
+      <div class="row">
+        <img src="assets/pictures/blog/blogArtboard 1.jpg" class="img-fluid art-img"/>
+      </div>
+      <div class="row recent-row">
+        <h3 class="title-2">
+          RECENT POSTS
         </h3>
-        <app-what-you-think-form (posted)="onPosted($event)"></app-what-you-think-form>
       </div>
+      <app-recent-posts></app-recent-posts>
     </div>
-    <app-comments [currentBlogItem]="currentBlogItem" [currentBlogItemId]="id"></app-comments>
-  </div>
-  <div class="col-md-4 col-blog-item">
-    <div class="row">
-      <img src="assets/pictures/blog/blogArtboard 1.jpg" class="img-fluid art-img"/>
-    </div>
-    <div class="row recent-row">
-      <h3 class="title-2">
-        RECENT POSTS
-      </h3>
-    </div>
-    <app-recent-posts></app-recent-posts>
   </div>
 </div>

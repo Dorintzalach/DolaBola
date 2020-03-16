@@ -15,6 +15,7 @@ export class BlogItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.currentBlogItem);
     this.id = (this.row * 3) + this.index;
   }
 }

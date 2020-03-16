@@ -13,6 +13,7 @@ export class BlogItemDetailRecentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.currentBlogItem);
   }
 
 }

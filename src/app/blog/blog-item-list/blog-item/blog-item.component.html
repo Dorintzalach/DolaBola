@@ -17,7 +17,12 @@
         </div>
         <div class="col-md-3 col-sm-2 col-xs-2 icons-col">
           <img src="assets/pictures/blog/comment.png" class="icon-img"/>
-          {{ currentBlogItem.comments.length }}
+          <div *ngIf="currentBlogItem.comments; else elseBlock">
+            {{ currentBlogItem.comments.length }}
+          </div>
+          <ng-template #elseBlock>
+            0
+          </ng-template>
         </div>
       </div>
     </div>
