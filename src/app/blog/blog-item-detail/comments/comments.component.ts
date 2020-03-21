@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BlogItem} from '../../blog-item.model';
+import {hasOwnProperty} from 'tslint/lib/utils';
+import {CommentItem} from './comment-item.model';
 
 @Component({
   selector: 'app-comments',
@@ -11,8 +13,9 @@ export class CommentsComponent implements OnInit {
   commentArrow: string;
   openArrow: string;
   closeArrow: string;
-  @Input() currentBlogItem: BlogItem;
-  @Input() currentBlogItemId: number;
+  @Input() blogItem: any;
+  @Input() BlogItemId: any;
+  // blogItem: BlogItem;
   commentsOpen: boolean;
 
   constructor() {
@@ -33,5 +36,9 @@ export class CommentsComponent implements OnInit {
       this.commentsOpen = true;
       this.commentArrow = this.openArrow;
     }
+  }
+
+  setComment($event: object) {
+    console.log($event);
   }
 }

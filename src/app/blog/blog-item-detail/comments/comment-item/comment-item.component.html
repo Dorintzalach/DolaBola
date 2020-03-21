@@ -26,9 +26,11 @@
     </div>
   </div>
   <div class="container">
-    <app-comment-item *ngFor="let reply of currentComment.replies" [currentComment]="reply">
-    </app-comment-item>
-    <app-reply-comment *ngIf="replied" (submitReply)="reply($event)">
+    <div *ngIf="currentComment.replies">
+      <app-comment-item *ngFor="let reply of currentComment.replies; let i=index" [currentComment]="reply">
+      </app-comment-item>
+    </div>
+    <app-reply-comment *ngIf="replied" [currentBlogItemId]="currentBlogItemId" [currentCommentItemId]="currentCommentId" (submitReply)="reply($event)">
     </app-reply-comment>
   </div>
 </div>

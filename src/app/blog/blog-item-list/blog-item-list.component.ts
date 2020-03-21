@@ -11,7 +11,7 @@ import {map} from 'rxjs/operators';
 export class BlogItemListComponent implements OnInit {
   blogItems: BlogItem[] = null;
   orderedItems = [];
-  observer$ = this.blogService.data$;
+  observer$ = this.blogService.allBlogItem$;
 
 
   constructor(private blogService: BlogService) {}
@@ -19,6 +19,7 @@ export class BlogItemListComponent implements OnInit {
   ngOnInit() {
     this.blogService.getBlogItems();
     this.observer$.subscribe(data => {
+        console.log('blog items changed');
         this.blogItems = data;
         this.setNumberOfItemsPerRow(3);
     });

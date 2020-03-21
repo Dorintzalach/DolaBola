@@ -26,7 +26,6 @@ export class WhatYouThinkFormComponent implements OnInit {
     this.newComment.date = Date.now();
     this.newComment.content = this.whatYouThinkForm.value.comment;
     this.posted.emit(this.newComment);
-    console.log(this.whatYouThinkForm);
     this.whatYouThinkForm.reset();
   }
 }

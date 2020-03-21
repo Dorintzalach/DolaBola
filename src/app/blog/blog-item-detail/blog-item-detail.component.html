@@ -2,7 +2,7 @@
   <div class="row main-row">
     <div class="col-md-8 col-blog-item">
       <div class="row img-row">
-        <img [src]="currentBlogItem.imagePath" class="img-fluid blog-item-img"/>
+        <img *ngIf="currentBlogItem.imagePath" [src]="currentBlogItem.imagePath" class="img-fluid blog-item-img"/>
       </div>
       <div class="row justify-content-between my-detail-row">
         <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="all-details">
+      <div class="all-details" *ngIf="currentBlogItem.content">
         <div class="row">
           <h2 class="title">
             {{ currentBlogItem.content[0].title}}
@@ -60,7 +60,7 @@
           <app-what-you-think-form (posted)="onPosted($event)"></app-what-you-think-form>
         </div>
       </div>
-      <app-comments [currentBlogItem]="currentBlogItem" [currentBlogItemId]="id"></app-comments>
+      <app-comments *ngIf="currentBlogItem" [blogItem]="currentBlogItem" [BlogItemId]="id"></app-comments>
     </div>
     <div class="col-md-4 col-blog-item">
       <div class="row">

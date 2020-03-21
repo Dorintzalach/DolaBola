@@ -4,14 +4,18 @@
       COMMENTS
     </h1>
     <div [class]="commentsOpen? 'container-A': 'container-B'">
-      <div [ngClass]="commentArrow" (click)="this.getComments()">
-
+      <div [ngClass]="commentArrow" (click)="getComments()">
       </div>
     </div>
-    <div class="comments-div" *ngIf="commentsOpen">
-      <app-comment-item
-        *ngFor="let comment of currentBlogItem.comments; let i = index" [currentComment]="comment" [currentBlogItemId]="currentBlogItemId" [currentCommentId]="i">
-      </app-comment-item>
+    <div class="comments-div" *ngIf="commentsOpen && blogItem.comments">
+      <div *ngIf="blogItem.comments.length>1; else justOne">
+        <app-comment-item
+          *ngFor="let comment of blogItem.comments; let i = index" (replyEmitter)="setComment($event)" [currentComment]="(comment)" [currentBlogItemId]="BlogItemId" [currentCommentId]="i">
+        </app-comment-item>
+      </div>
+      <ng-template #justOne>
+        <app-comment-item (replyEmitter)="setComment($event)" [currentComment]="blogItem.comments[0]" [currentBlogItemId]="BlogItemId" [currentCommentId]="0"></app-comment-item>
+      </ng-template>
     </div>
   </div>
 </div>

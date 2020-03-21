@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {BlogItem} from '../blog-item.model';
 import {BlogService} from '../blog.service';
 import {ActivatedRoute, Params} from '@angular/router';
@@ -10,10 +10,11 @@ import {map} from 'rxjs/operators';
   templateUrl: './blog-item-detail.component.html',
   styleUrls: ['./blog-item-detail.component.css']
 })
-export class BlogItemDetailComponent implements OnInit {
+export class BlogItemDetailComponent implements OnInit, OnChanges {
   currentBlogItem: BlogItem = null;
   id: number;
   observer$ = this.blogService.blogItem$;
+  observerUpdateComment$ = this.blogService.updateComment$;
 
 
   constructor(private blogService: BlogService, private route: ActivatedRoute) { }
@@ -22,22 +23,11 @@ export class BlogItemDetailComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
     });
-    // this.blogService.getBlogItem(this.id);
-    // this.observer$.pipe(map(data => {
-    //   const theArray = data[0];
-    //   const newItem: BlogItem = new BlogItem();
-    //   newItem.id = theArray[0];
-    //   newItem.date = theArray[1];
-    //   newItem.title = theArray[3];
-    //   newItem.imagePath = theArray[4];
-    //   newItem.content = theArray[5];
-    //   newItem.likes = theArray[6];
-    //   newItem.description = theArray[7];
-    //   return newItem;
-    // })).subscribe((resData: any) => {
-    //   this.currentBlogItem = resData;
-    // });
-    this.currentBlogItem = this.blogService.getBlogItem(this.id);
+    this.blogService.getBlogItem(this.id);
+    this.observer$.subscribe(data => {
+      console.log(data);
+      this.currentBlogItem = data;
+    });
   }
 
   likeBlogItem() {
@@ -45,7 +35,33 @@ export class BlogItemDetailComponent implements OnInit {
   }
 
   onPosted($event: CommentItem) {
-    this.blogService.setComment(this.id, $event);
-    this.currentBlogItem.comments.push($event);
+    this.blogService.setComment(this.id, $event, true);
+    this.observer$.subscribe(data => {
+      if (!this.currentBlogItem.comments) {
+        this.currentBlogItem.comments = [];
+      }
+      this.currentBlogItem.comments.push($event);
+    });
+    // this.observerUpdateComment$.subscribe(res => {
+    //   console.log(res);
+    //   if (!this.currentBlogItem.comments) {
+    //     this.currentBlogItem.comments = [];
+    //   }
+    //   this.currentBlogItem.comments.push($event);
+    // });
+    // this.blogService.getBlogItem(this.id);
+    // this.observer$.subscribe(data => {
+    //   this.currentBlogItem = data;
+    // });
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.observer$.subscribe(data => {
+      console.log('on changes');
+      console.log(data);
+      this.currentBlogItem = data;
+    });
+  }
+
+
 }

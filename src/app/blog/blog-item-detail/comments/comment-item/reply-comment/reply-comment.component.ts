@@ -1,6 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgModel} from '@angular/forms';
 import {CommentItem} from '../../comment-item.model';
+import {BlogService} from '../../../../blog.service';
 
 @Component({
   selector: 'app-reply-comment',
@@ -9,11 +10,16 @@ import {CommentItem} from '../../comment-item.model';
 })
 export class ReplyCommentComponent implements OnInit {
   @Output() submitReply = new EventEmitter<CommentItem>();
+  @Input() currentBlogItemId: number;
+  @Input() currentCommentItemId: number;
   reply: CommentItem;
+  replied: boolean;
+  observer$ = this.blogService.updateComment$;
 
-  constructor() { }
+  constructor(private blogService: BlogService) { }
 
   ngOnInit() {
+    this.replied = false;
   }
 
   postComment(posted: boolean, replyNickName: NgModel, replyComment: NgModel) {
@@ -22,5 +28,6 @@ export class ReplyCommentComponent implements OnInit {
     this.reply.content = replyComment.value;
     this.reply.date = Date.now();
     this.submitReply.emit(this.reply);
+    this.replied = !this.replied;
   }
 }
