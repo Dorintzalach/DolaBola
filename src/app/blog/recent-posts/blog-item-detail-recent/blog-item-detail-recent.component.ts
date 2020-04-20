@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BlogItem} from '../../blog-item.model';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-blog-item-detail-recent',
@@ -10,10 +11,17 @@ export class BlogItemDetailRecentComponent implements OnInit {
   @Input() currentBlogItem: BlogItem;
   @Input() index: number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log(this.currentBlogItem);
   }
 
+  // navigate(id) {
+  //   const url = '/blog/' + id;
+  //   this.router.navigateByUrl(url).then(
+  //     e => {
+  //       console.log(url);
+  //     }
+  //   );
+  // }
 }

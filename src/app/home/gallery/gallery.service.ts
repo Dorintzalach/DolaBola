@@ -25,6 +25,10 @@ export class GalleryService {
       {small: '/../../assets/pictures/gallery/gallery-img4.jpg',
         medium: '/../../assets/pictures/gallery/gallery-img4.jpg',
         big: '/../../assets/pictures/gallery/gallery-img4.jpg'
+      },
+      {small: '/../../assets/pictures/gallery/gallery-img4.jpg',
+        medium: '/../../assets/pictures/gallery/gallery-img4.jpg',
+        big: '/../../assets/pictures/gallery/gallery-img4.jpg'
       }
     ];
   }

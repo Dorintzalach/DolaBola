@@ -110,9 +110,16 @@ li{
 
 .left-menu{
   left: 0;
-  min-width: 100%;
+  width: 50%;
   top: 0;
-  background: url("/../../assets/pictures/header/menu_2.jpg");
+  position: fixed;
+  /*background: url("/../../assets/pictures/header/menu_2.jpg") no-repeat center center fixed;*/
+  /*background-size: cover;*/
+  height: 100%;
+  overflow: hidden;
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
+  /*background-position: left;*/
 }
 
 .right-menu{
@@ -153,5 +160,25 @@ li{
 .network-details:hover{
   color: #3B3C3C;
 }
-.img-fluid{
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 200px) and (max-width: 720px)   {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: white;
+  }
+
+  .db-icon{
+    width: 100%;
+    height: 80%;
+    padding-left: 11%;
+    padding-top: 11%;
+  }
+
+  .right-menu{
+    width: 100%;
+  }
 }

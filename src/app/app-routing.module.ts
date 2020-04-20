@@ -11,9 +11,11 @@ const appRouts: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent},
-  { path: 'blog/:id', component: BlogItemDetailComponent, children: [
-      {path: '', component: BlogItemDetailComponent}
-    ] }
+  { path: 'blog/:id', component: BlogItemDetailComponent,
+    children: [
+      // {path: '', redirectTo: 'blog/:id', pathMatch: 'full'}
+    ] },
+  // {path: 'blog/:id', component: BlogItemDetailComponent}
 ];
 
 @NgModule({

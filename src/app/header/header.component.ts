@@ -21,16 +21,31 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class HeaderComponent implements OnInit {
   menuState = 'out';
   navbarOpen = false;
-  leftIcon = '/../../assets/pictures/header/DB_black.png';
+  leftIcon: string;
 
   constructor() { }
 
   ngOnInit() {
-
+    const width = window.innerWidth;
+    if (width < 720) {
+      this.leftIcon = '/../../assets/pictures/header/DB_white.png';
+    } else {
+      this.leftIcon = '/../../assets/pictures/header/DB_black.png';
+    }
   }
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    const currentWidth = event.target.innerWidth;
+    if (currentWidth < 720) {
+      this.leftIcon = '/../../assets/pictures/header/DB_white.png';
+    } else {
+      this.leftIcon = '/../../assets/pictures/header/DB_black.png';
+    }
   }
 }

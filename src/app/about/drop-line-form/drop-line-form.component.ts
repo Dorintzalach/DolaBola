@@ -7,9 +7,9 @@ import {AboutService} from './about.service';
   styleUrls: ['./drop-line-form.component.css']
 })
 export class DropLineFormComponent implements OnInit {
-  enteredName = 'Name';
-  enteredEmail = 'Email';
-  enteredMessage = 'Your Message';
+  enteredName = '';
+  enteredEmail = '';
+  enteredMessage = '';
   observer$ = this.aboutService.sendEmailAnswer$;
 
 
@@ -24,6 +24,7 @@ export class DropLineFormComponent implements OnInit {
       messageContent: this.enteredMessage,
       from: this.enteredName
     };
+    console.log(message);
     this.aboutService.sendEmail(message);
     this.observer$.subscribe(res => {
       if (res) {

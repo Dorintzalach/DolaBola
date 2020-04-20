@@ -14,7 +14,7 @@ export class BlogItemDetailComponent implements OnInit, OnChanges {
   currentBlogItem: BlogItem = null;
   id: number;
   observer$ = this.blogService.blogItem$;
-  observerUpdateComment$ = this.blogService.updateComment$;
+  observerSetLikes$ = this.blogService.updateLikes$;
 
 
   constructor(private blogService: BlogService, private route: ActivatedRoute) { }
@@ -22,19 +22,33 @@ export class BlogItemDetailComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
+      this.blogService.getBlogItem(this.id);
+      console.log(this.id);
     });
-    this.blogService.getBlogItem(this.id);
-    this.observer$.subscribe(data => {
-      console.log(data);
-      this.currentBlogItem = data;
+    this.route.queryParams.subscribe((params: Params) => {
+      this.id = +params.id;
+      this.blogService.getBlogItem(this.id);
+      this.observer$.subscribe(data => {
+        console.log(data);
+        this.currentBlogItem = data;
+      });
     });
   }
 
-  likeBlogItem() {
-    this.currentBlogItem.likes = this.currentBlogItem.likes + 1;
+  likeBlogItem($event) {
+    this.blogService.setLike(this.currentBlogItem.id);
+    this.observerSetLikes$.subscribe(res => {
+      if (res) {
+        this.currentBlogItem.likes = this.currentBlogItem.likes + 1;
+      }
+    });
   }
 
   onPosted($event: CommentItem) {
+    if (!this.id) {
+      this.id = this.currentBlogItem.id;
+    }
+    $event.blogItemID = this.id;
     this.blogService.setComment(this.id, $event, true);
     this.observer$.subscribe(data => {
       if (!this.currentBlogItem.comments) {

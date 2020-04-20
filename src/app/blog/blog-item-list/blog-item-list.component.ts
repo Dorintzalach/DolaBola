@@ -19,13 +19,13 @@ export class BlogItemListComponent implements OnInit {
   ngOnInit() {
     this.blogService.getBlogItems();
     this.observer$.subscribe(data => {
-        console.log('blog items changed');
         this.blogItems = data;
         this.setNumberOfItemsPerRow(3);
     });
   }
 
   private setNumberOfItemsPerRow( k: number) {
+    this.orderedItems = [];
     for (let i = 0; i < this.blogItems.length; i += k) {
       this.orderedItems.push({ items: this.blogItems.slice(i, i + k) });
     }

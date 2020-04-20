@@ -28,6 +28,18 @@ export class CommentsComponent implements OnInit {
     this.commentArrow = this.closeArrow;
   }
 
+  // openComments() {
+  //   this.commentsOpen = true;
+  //   this.commentArrow = this.openArrow;
+  //   console.log('here');
+  // }
+  //
+  // closeComments() {
+  //   this.commentsOpen = false;
+  //   this.commentArrow = this.closeArrow;
+  //   console.log('here');
+  // }
+
   getComments() {
     if (this.commentsOpen) {
       this.commentsOpen = false;
@@ -38,7 +50,7 @@ export class CommentsComponent implements OnInit {
     }
   }
 
-  setComment($event: object) {
-    console.log($event);
+  setComment = (): BlogItem => {
+    return this.blogItem;
   }
 }

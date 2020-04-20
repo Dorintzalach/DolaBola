@@ -12,7 +12,7 @@ export class CommentItemComponent implements OnInit {
   @Input() currentComment: CommentItem;
   @Input() currentCommentId: number;
   @Input() currentBlogItemId: number;
-  @Output() replyEmitter = new EventEmitter<object>();
+  @Input() getCurrentBlogItem: () => BlogItem;
   replied: boolean;
   nickName: string;
   observerUpdateComment$ = this.blogService.updateComment$;
@@ -29,13 +29,15 @@ export class CommentItemComponent implements OnInit {
   }
 
   reply($event: CommentItem) {
-    this.replyEmitter.emit({comment: $event, commentID: this.currentCommentId});
+    if (!this.currentBlogItemId) {
+      const blogItem = this.getCurrentBlogItem();
+      this.currentBlogItemId = blogItem.id;
+    }
     if (this.currentBlogItemId ) {
       this.blogService.setReplyToComment(this.currentBlogItemId, this.currentCommentId, $event);
       this.observerUpdateComment$.subscribe(res => {
         if (res) {
           if (!this.currentComment.replies) {
-            console.log('bla');
             this.currentComment.replies = [];
           }
           this.currentComment.replies.push($event);

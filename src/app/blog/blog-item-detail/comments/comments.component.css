@@ -13,14 +13,10 @@
   font-weight: 500;
 }
 
-.container-B {
-  margin-top: 0.8%;
-  margin-left: -2%;
-}
-
 .container-A {
   margin-left: -2%;
   margin-top: 0.8%;
+  z-index: 1;
 }
 
 
@@ -30,8 +26,8 @@
   height: auto;
 }
 .comments-div{
-  padding-top: 4%;
-  margin-left: -22%;
+  /*padding-top: 4%;*/
+  /*margin-left: -22%;*/
   width: 100%;
 }
 

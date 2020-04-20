@@ -2,21 +2,21 @@
   <div class="form-group">
     <div class="row">
       <div class="col-9 col-xs-12 col-sm-12">
-        <input placeholder="Name" required ngModel name="fullName"  #fullName="ngModel" id="fullName" type="text" class="my-form-input">
+        <input placeholder="Name" [(ngModel)]="enteredName" required #fullName="ngModel" name="fullName" id="fullName" type="text" class="my-form-input">
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="row">
       <div class="col-9 col-xs-12 col-sm-12">
-        <input placeholder="Email" required ngModel name="email"  #email="ngModel" id="email" type="text" class="my-form-input">
+        <input placeholder="Email" required [(ngModel)]="enteredEmail" name="email"  #email="ngModel" id="email" type="text" class="my-form-input">
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="row">
       <div class="col-9 col-xs-12 col-sm-12">
-        <input placeholder="Your Message" required ngModel name="message"  #message="ngModel" id="message" type="text" class="my-form-input">
+        <input placeholder="Your Message" required [(ngModel)]="enteredMessage" name="message"  #message="ngModel" id="message" type="text" class="my-form-input">
       </div>
     </div>
   </div>
