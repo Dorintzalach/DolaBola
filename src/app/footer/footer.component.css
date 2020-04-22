@@ -2,7 +2,13 @@
   background-color: #F9CAD2;
   height: auto;
   flex-shrink: 0;
+  padding: 3%;
 }
+
+.contact-row{
+  margin-left: 0.3%;
+}
+
 .my-container{
   max-width: 1642px;
 }
@@ -17,10 +23,8 @@
 }
 
 .footer-p{
-  font-size: 1.5vw;
   font-family: alegreya-reg;
   color: #695C5F;
-  line-height: 2.2vw;
 }
 
 .footer-a{
@@ -30,14 +34,78 @@
 }
 
 .bold-p{
-  font-size: 1.5vw;
   color: #3B3C3C;
   font-family: alegreya-bold;
 }
 
 .media-col{
-  padding: 1vw;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0% 0% 0% 3%;
   text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+.details-col{
+  font-size: 20px;
+}
+
+.media-img{
+  padding: 1%;
+}
+
+#facebook{
+  width: 35%;}
+
+#insta{
+  width: 68%;
+}
+
+.desktop-not-show{
+  display: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 720px)   {
+  .mobile-not-display{
+      display: none;
+  }
+
+  .my-col-db{
+    padding: 1.2%;
+    width: 21%;
+  }
+  .details-col{
+    font-size: 17px;
+    padding: 0% 0% 0% 0%;
+    line-height: 2px;
+  }
+
+  .footer-p{
+    line-height: 30px;
+  }
+
+  .bold-p{
+    margin-top: 2%;
+  }
+  .media-col{
+    padding: 0% 0% 0% 0%;
+    display: inline-table;
+  }
+
+  .media-img{
+    padding: 1%;
+  }
+
+  #facebook1{
+    width: 43%;
+  }
+  #insta1{
+    width: 85%;
+  }
+
+  .desktop-not-show{
+    display: inline;
+    padding-left: 3%;
+  }
 }

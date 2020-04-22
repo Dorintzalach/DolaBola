@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   // menuState: any;
 
   ngOnInit(): void {
-    timer(5000).subscribe(() => {
+    /*timer(5000).subscribe(() => {
       this.meta.removeTag('name="viewport"');
       this.meta.addTag({ name: 'viewport', content: 'width=1000' });
-    });
+    });*/
   }
 }

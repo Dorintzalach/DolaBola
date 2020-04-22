@@ -131,7 +131,7 @@
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 768px) and (max-width: 1200px){
+@media screen and (min-width: 720px) and (max-width: 1200px){
   .drop-line-row{
     padding: 0%;
   }
@@ -181,7 +181,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px)  {
+@media only screen and (max-width: 720px)  {
   .open-about-row{
     background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -204,24 +204,25 @@
     background-size: cover;
     width: 100%;
     height: auto;
-    padding: 6% 11% 90% 10%;
+    padding: 0% 0% 67% 6%;
     margin: 0;
   }
 
   .my-col{
     margin-left: 0;
     margin-top: 0;
-    padding:1% 1% 1% 7%;
-    line-height: 2.5rem;
+    padding: 3% 13% 1% 7%;
+    /*line-height: 2.5rem;*/
   }
 
   .title{
-    font-size: 70px;
+    font-size: 50px;
+    line-height: 3rem;
 
   }
 
   .my-paragraph{
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .meet-row{
@@ -233,7 +234,7 @@
     background-size: cover;
     width: 100%;
     height: auto;
-    padding: 0% 0% 78% 0%;
+    padding: 0% 13% 75% 0%;
     margin: 0;
   }
 
@@ -246,28 +247,20 @@
     background-size: cover;
     width: 100%;
     height: auto;
-    padding: 5% 2% 7% 0%;
+    padding: 0% 9% 4% 7%;
   }
 
   .drop-line-form{
     padding: 0 0% 3% 0%;
     margin-left: 7%;
   }
-}
 
-/*/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .open-about-row{
-    background: url('/../../assets/pictures/about/mobile/DB_Mobile_About_1.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: local;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    padding: 20%;
-    margin: 0;
+  .drop-line-col{
+    padding: 11% 0% 0% 6%;
+    margin: 0%;
   }
 
+  .my-form-group{
+    padding:0%;
+  }
 }
