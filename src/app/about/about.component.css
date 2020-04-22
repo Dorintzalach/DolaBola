@@ -87,6 +87,11 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width:  1224px) and (max-width: 1824px){
+
+  .desktop-not-display{
+    display: none;
+  }
+
   .drop-line-row{
     padding: 0%;
   }
@@ -132,6 +137,11 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 720px) and (max-width: 1200px){
+
+  .desktop-not-display{
+    display: none;
+  }
+
   .drop-line-row{
     padding: 0%;
   }
@@ -263,4 +273,10 @@
   .my-form-group{
     padding:0%;
   }
+
+  .mobile-not-display{
+    display: none;
+  }
+
+
 }
