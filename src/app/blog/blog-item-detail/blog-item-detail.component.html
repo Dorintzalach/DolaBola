@@ -1,20 +1,20 @@
 <div *ngIf="currentBlogItem">
   <div class="row main-row">
-    <div class="col-md-8 col-blog-item">
+    <div class="col-md-8 col-12 col-blog-item">
       <div class="row img-row">
         <img *ngIf="currentBlogItem.imagePath" [src]="currentBlogItem.imagePath" class="img-fluid blog-item-img"/>
       </div>
       <div class="row justify-content-between my-detail-row">
-        <div class="col-md-4 col-sm-6 col-xs-6 detail-col">
+        <div class="col-md-4 col-6 detail-col">
           {{ currentBlogItem.date | date: "longDate"}}
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-6 detail-col" (click)="likeBlogItem($event)">
+        <div class="col-md-4 col-6 detail-col mobile-not-display" (click)="likeBlogItem($event)">
           <div class="row justify-content-end align-items-md-center">
-            <div class="col-md-2  col-sm-2 col-xs-2 icons-col likes">
+            <div class="col-md-2  col-2 icons-col likes">
               <img src="assets/pictures/blog/like.png" class="icon-img"/>
               {{ currentBlogItem.likes }}
             </div>
-            <div class="col-md-2 col-sm-2 col-xs-2  icons-col">
+            <div class="col-md-2 col-2 icons-col">
               <div class="row justify-content-around">
                 <div class="col-6">
                   <img src="assets/pictures/blog/comment.png" class="icon-img"/>
@@ -66,10 +66,12 @@
           <app-what-you-think-form (posted)="onPosted($event)"></app-what-you-think-form>
         </div>
       </div>
-      <app-comments *ngIf="currentBlogItem" [blogItem]="currentBlogItem" [BlogItemId]="id"></app-comments>
+      <div class="comments-row">
+        <app-comments *ngIf="currentBlogItem" [blogItem]="currentBlogItem" [BlogItemId]="id"></app-comments>
+      </div>
     </div>
-    <div class="col-md-4 col-blog-item">
-      <div class="row">
+    <div class="col-md-4 col-11 col-blog-item mobile-not-display">
+      <div class="row mobile-not-display">
         <img src="assets/pictures/blog/blogArtboard 1.jpg" class="img-fluid art-img"/>
       </div>
       <div class="row recent-row">
@@ -79,5 +81,13 @@
       </div>
       <app-recent-posts></app-recent-posts>
     </div>
+    <section id="recent-posts-mobile">
+      <div class="row recent-row desktop-not-display">
+        <h3 class="title-2">
+          RECENT POSTS
+        </h3>
+        <app-recent-posts></app-recent-posts>
+      </div>
+    </section>
   </div>
 </div>

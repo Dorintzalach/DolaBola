@@ -1,7 +1,7 @@
 .my-detail-row{
   font-family: alegreya-reg;
   color: 	#A9A9A9;
-  size: 1.3vw;
+  font-size: 15px;
 }
 .title-col{
   font-family: alegreya-bold;
@@ -22,28 +22,46 @@
   font-size: 1.3vw;
 }
 .icon-img{
-  width: 18px;
-  height: 15px;
+  width: 15px;
+  height: 13px;
   object-fit: cover;
 }
 .icons-col{
-  padding: 0;
+  display: contents;
 }
 
 a{
   text-decoration: none !important;
 }
 
+.icons-row{
+  margin-right: 1%;
+}
+
+.icons{
+  padding-left: 3%;
+}
+
 @media only screen and (max-width: 720px) {
   .my-img{
-    height: 550px;
+    height: 300px;
   }
 
   .title-col{
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 33px;
   }
 
   .desc-col{
-    font-size: 30px;
+    font-size: 22px;
+    padding: 0% 12% 0% 5%;
+    line-height: 23px;
+  }
+
+  /*.icons-col{*/
+  /*  font-size: 19px;*/
+  /*}*/
+  .my-detail-row{
+    font-size: 15px;
   }
 }

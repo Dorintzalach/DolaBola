@@ -58,15 +58,27 @@
 
 }
 @media only screen and (max-width: 720px) {
+  hr{
+    max-width: 100%;
+    margin-right: 20%;
+  }
   .comment-owner{
-    font-size: 35px;
+    font-size: 25px;
+    margin-bottom: 0%;
   }
 
   .comment-content-col{
-    padding: 2% 7% 0% 3%;
+    padding: 0% 0% 0% 5%;
   }
 
+
+  .comment-content{
+    font-size: 15px;
+  }
   .comments-container{
-    padding: 8% 0% 0% 4%;
+    padding: 0% 0% 0% 4%;
+  }
+  .date-comment-row{
+    font-size: 15px;
   }
 }

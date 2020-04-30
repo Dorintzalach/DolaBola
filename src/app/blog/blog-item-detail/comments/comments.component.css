@@ -65,7 +65,8 @@
 
 @media only screen and (max-width: 720px) {
   .comments-container{
-    padding: 7% 0% 7% 7%;
+    padding: 7% 0% 7% 11%;
+    margin-bottom: 5%;
   }
 
   .container-B {
@@ -74,12 +75,13 @@
   }
 
   .container-A {
-    margin-top: 3.5%;
-    margin-left: 3%;
-    width: 30px;
+    margin-left: -4%;
+    margin-top: 1%;
+    margin-right: 0%;
+
   }
 
   .comments-title{
-    font-size: 40px;
+    font-size: 28px;
   }
 }

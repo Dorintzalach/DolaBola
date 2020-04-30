@@ -1,45 +1,68 @@
 <a style="cursor: pointer"
    [routerLink]="['/blog', currentBlogItem.id]">
   <div *ngIf="currentBlogItem" class="row my-main-row">
-    <div class="col-md-12 img-col">
+    <div class="col-12 img-col">
       <img src="{{ currentBlogItem.imagePath }}" class="img-fluid my-img"/>
     </div>
   </div>
   <div class="row justify-content-between my-detail-row">
-    <div class="col-md-7 col-xs-7 col-sm-7">
+    <div class="col-7">
       {{ currentBlogItem.date | date: "longDate" }}
     </div>
-    <div class="col-md-5 col-xs-5 col-sm-5">
-      <div class="row justify-content-end">
-        <div class="col-md-5 col-xs-4 col-sm-4 icons-col">
-          <img src="assets/pictures/blog/like.png" class="icon-img"/>
-          {{ currentBlogItem.likes }}
+    <div class="col-5">
+      <div class="row justify-content-end align-items-center icons-row">
+        <div class="col-6 col-md-4 icons-col">
+          <span class="icons">
+            <img src="assets/pictures/blog/like.png" class="img-fluid icon-img"/>
+          </span>
+          <span class="icons">
+            {{ currentBlogItem.likes }}
+          </span>
         </div>
-        <div class="col-md-5 col-xs-4 col-sm-4 icons-col">
-          <div class="row justify-content-around">
-            <div class="col-6">
-              <img src="assets/pictures/blog/comment.png" class="icon-img"/>
+        <div class="col-6 col-md-4 icons-col">
+          <span class="icons">
+            <img src="assets/pictures/blog/comment.png" class="img-fluid icon-img"/>
+          </span>
+          <span class="icons">
+            <div *ngIf="currentBlogItem.comments; else elseBlock">
+              {{ currentBlogItem.comments.length }}
             </div>
-            <div class="col-6 no_padding">
-              <div *ngIf="currentBlogItem.comments; else zero">
-                {{ currentBlogItem.comments.length }}
-              </div>
-              <ng-template #zero>
-                0
-              </ng-template>
-            </div>
-          </div>
+            <ng-template #elseBlock>
+              0
+            </ng-template>
+          </span>
         </div>
       </div>
+<!--      <div class="row justify-content-end">-->
+<!--        <div class="col-md-5 col-4 icons-col">-->
+<!--          <img src="assets/pictures/blog/like.png" class="icon-img"/>-->
+<!--          {{ currentBlogItem.likes }}-->
+<!--        </div>-->
+<!--        <div class="col-md-5 col-4 icons-col">-->
+<!--          <div class="row justify-content-around">-->
+<!--            <div class="col-6">-->
+<!--              <img src="assets/pictures/blog/comment.png" class="icon-img"/>-->
+<!--            </div>-->
+<!--            <div class="col-6 no_padding">-->
+<!--              <div *ngIf="currentBlogItem.comments; else zero">-->
+<!--                {{ currentBlogItem.comments.length }}-->
+<!--              </div>-->
+<!--              <ng-template #zero>-->
+<!--                0-->
+<!--              </ng-template>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12 title-col">
+    <div class="col-12 title-col">
       {{ currentBlogItem.title }}
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12 desc-col">
+    <div class="col-12 desc-col">
       {{ currentBlogItem.description }}
     </div>
   </div>

@@ -1,20 +1,25 @@
 <hr>
 <div class="comments-container">
-  <div class="row justify-content-between">
+  <div class="row justify-content-start">
     <div class="col-6 date-comment-row">
       {{ currentComment.date | date: "longDate"}}
       by
       {{ currentComment.owner}}
     </div>
-    <div class="col-2 col-sm-3 col-xs-3">
-      <div class="date-comment-row reply" (click)="setReply()">
-        <img src="assets/pictures/blog/comment.png" class="icon-img"/>
-        Reply
+    <div class="col-md-2 col-3">
+      <div class="row">
+        <div class="date-comment-row reply" (click)="setReply()">
+          <img src="assets/pictures/blog/comment.png" class="icon-img"/>
+          Reply
+        </div>
       </div>
+    </div>
+    <div class="col-1 col-md-2">
+
     </div>
   </div>
   <div class="row">
-    <div class="col-3 col-sm-5 col-xs-5">
+    <div class="col-md-3 col-5">
       <h3 class="comment-owner">
         {{ currentComment.owner | uppercase}}
       </h3>

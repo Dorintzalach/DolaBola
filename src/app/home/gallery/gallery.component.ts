@@ -60,7 +60,7 @@ export class GalleryComponent implements OnInit {
       {
         breakpoint: 700,
         width: '100%',
-        height: '350px',
+        height: '300px',
         imagePercent: 100,
         imageBullets: true,
         thumbnailsPercent: 30,
@@ -72,8 +72,16 @@ export class GalleryComponent implements OnInit {
       // max-width 400
       {
         breakpoint: 400,
+        width: '100%',
+        height: '250px',
+        imagePercent: 100,
+        imageBullets: true,
+        thumbnailsPercent: 30,
+        thumbnailsMargin: 50,
+        thumbnailsColumns: 2,
+        imageInfinityMove: true,
+        thumbnailsArrowsAutoHide: true,
         preview: true,
-
       }
     ];
     // console.log(this.galleryOptions[0].thumbnailsColumns);

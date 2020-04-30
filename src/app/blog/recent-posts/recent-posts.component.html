@@ -1,5 +1,5 @@
 <div *ngIf="recentBlogItems" class="row my-row mg-bottom justify-content-center">
   <ng-container *ngFor="let item of recentBlogItems; let i = index">
-    <app-blog-item-detail-recent class="col-xs-5 col-sm-5 col-md-6 blog-item-col" [currentBlogItem]="item" [index]="i"></app-blog-item-detail-recent>
+    <app-blog-item-detail-recent class="col-5 col-md-6 blog-item-col" [currentBlogItem]="item" [index]="i"></app-blog-item-detail-recent>
   </ng-container>
 </div>

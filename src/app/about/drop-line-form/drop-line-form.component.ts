@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AboutService} from './about.service';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-drop-line-form',
@@ -18,7 +19,7 @@ export class DropLineFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendMessage() {
+  sendMessage(form: NgForm) {
     const message = {
       email: this.enteredEmail,
       messageContent: this.enteredMessage,
@@ -27,11 +28,7 @@ export class DropLineFormComponent implements OnInit {
     console.log(message);
     this.aboutService.sendEmail(message);
     this.observer$.subscribe(res => {
-      if (res) {
-        this.enteredName = 'Name';
-        this.enteredEmail = 'Email';
-        this.enteredMessage = 'Your Message';
-      }
+      form.resetForm();
     });
   }
 }

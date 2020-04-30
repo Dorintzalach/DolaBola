@@ -28,7 +28,7 @@ export class BlogItemDetailComponent implements OnInit, OnChanges {
     this.route.queryParams.subscribe((params: Params) => {
       this.id = +params.id;
       this.blogService.getBlogItem(this.id);
-      this.observer$.subscribe(data => {
+      this.observer$.subscribe((data: BlogItem) => {
         console.log(data);
         this.currentBlogItem = data;
       });
@@ -56,17 +56,6 @@ export class BlogItemDetailComponent implements OnInit, OnChanges {
       }
       this.currentBlogItem.comments.push($event);
     });
-    // this.observerUpdateComment$.subscribe(res => {
-    //   console.log(res);
-    //   if (!this.currentBlogItem.comments) {
-    //     this.currentBlogItem.comments = [];
-    //   }
-    //   this.currentBlogItem.comments.push($event);
-    // });
-    // this.blogService.getBlogItem(this.id);
-    // this.observer$.subscribe(data => {
-    //   this.currentBlogItem = data;
-    // });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -76,6 +65,4 @@ export class BlogItemDetailComponent implements OnInit, OnChanges {
       this.currentBlogItem = data;
     });
   }
-
-
 }

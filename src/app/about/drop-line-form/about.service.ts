@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 
-const SERVER_URL = 'https://n7uqeb2cck.execute-api.us-west-2.amazonaws.com/production/';
+const SERVER_URL = 'https://yj8o2w6ial.execute-api.eu-central-1.amazonaws.com/production/';
 
 
 @Injectable({

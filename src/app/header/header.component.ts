@@ -27,11 +27,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const width = window.innerWidth;
-    if (width < 720) {
-      this.leftIcon = '/../../assets/pictures/header/DB_white.png';
-    } else {
-      this.leftIcon = '/../../assets/pictures/header/DB_black.png';
-    }
+    this.leftIcon = '/../../assets/pictures/header/DB_black.png';
   }
 
   toggleNavbar() {
@@ -39,13 +35,22 @@ export class HeaderComponent implements OnInit {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    const currentWidth = event.target.innerWidth;
-    if (currentWidth < 720) {
-      this.leftIcon = '/../../assets/pictures/header/DB_white.png';
-    } else {
-      this.leftIcon = '/../../assets/pictures/header/DB_black.png';
-    }
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   const currentWidth = event.target.innerWidth;
+  //   if (currentWidth < 720) {
+  //     this.leftIcon = '/../../assets/pictures/header/DB_white.png';
+  //   } else {
+  //     this.leftIcon = '/../../assets/pictures/header/DB_black.png';
+  //   }
+  // }
+
+  // @HostListener('scroll', ['$event']) // for scroll events of the current element
+  // @HostListener('window:scroll', ['$event']) // for window scroll events
+  // onScroll(event) {
+  //   if (this.leftIcon === '/../../assets/pictures/header/DB_white.png') {
+  //     this.leftIcon = '/../../assets/pictures/header/DB_black.png';
+  //     this.scrolled = true;
+  //   }
+  // }
 }

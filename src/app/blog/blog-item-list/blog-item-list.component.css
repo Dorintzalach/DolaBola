@@ -7,6 +7,9 @@
 }
 @media only screen and (max-width: 720px) {
   .blog-item-col{
-    padding: 18% 12% 1% 12%;
+    padding: 12% 12% 0% 12%;
+  }
+  .my-row{
+    margin-bottom: 6%;
   }
 }
