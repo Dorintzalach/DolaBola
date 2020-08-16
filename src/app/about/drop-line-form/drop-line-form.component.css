@@ -23,9 +23,9 @@ input {
 
 .my-btn{
   color: black;
-  padding: 0% 2.8vw 0% 2.8vw;
+  padding: 0% 35% 0% 35%;
   background-color: #F0F0F0;
-  font-size: 1.1vw;
+  font-size: 20px;
   border-radius: 20px;
   font-weight: 500;
 }
@@ -50,7 +50,7 @@ input#message{
 
   .my-btn{
     color: black;
-    padding: 0% 21% 0% 21%;
+    padding: 0% 40% 0% 40%;
     background-color: #F0F0F0;
     font-size: 3.1vw;
     border-radius: 20px;

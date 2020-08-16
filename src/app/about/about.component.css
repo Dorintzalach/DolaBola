@@ -86,11 +86,14 @@
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width:  1224px) and (max-width: 1824px){
+@media only screen and (max-width: 1824px) and (min-width:  1224px){
 
-  .desktop-not-display{
-    display: none;
-  }
+  /*.mobile-not-display{*/
+  /*  display: none;*/
+  /*}*/
+  /*.desktop-not-display{*/
+  /*  display: none;*/
+  /*}*/
 
   .drop-line-row{
     padding: 0%;
@@ -111,7 +114,7 @@
   }
 
   .meet-row{
-    padding: 4% !important;
+    padding: 6% !important;
   }
 
   .meet-col{
@@ -120,9 +123,8 @@
 
   }
   .my-middle-row{
-    padding: 5.8%;
+    padding: 6%;
     margin: 0;
-    margin-top: 1%;
     /*margin-bottom: 2%;*/
     line-height: 1.9rem;
   }
@@ -137,10 +139,9 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 720px) and (max-width: 1200px){
-
-  .desktop-not-display{
-    display: none;
-  }
+  /*.mobile-not-display{*/
+  /*  display: none;*/
+  /*}*/
 
   .drop-line-row{
     padding: 0%;
@@ -265,7 +266,7 @@
   }
 
   .drop-line-col{
-    padding: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 3%;
     margin: 0%;
   }
 
@@ -273,9 +274,11 @@
     padding:0%;
   }
 
-  .mobile-not-display{
-    display: none;
-  }
+  /*.mobile-not-display{*/
+  /*  display: inline;*/
+  /*}*/
 
-
+  /*.desktop-not-display{*/
+  /*  display: none;*/
+  /*}*/
 }

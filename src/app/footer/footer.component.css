@@ -71,23 +71,17 @@ ul {
       display: none;
   }
 
-  .my-col-db{
-    padding: 1.2%;
-    width: 21%;
-  }
   .details-col{
-    font-size: 13px;
+    font-size: 11px;
     padding: 0% 0% 0% 0%;
-    line-height: 2px;
-  }
-
-  .footer-p{
     line-height: 20px;
   }
 
-  .bold-p{
-    margin-top: 2%;
+  .footer-p{
+    margin: 0px;
+    margin-top: 8%;
   }
+
   .media-col{
     padding: 0% 0% 0% 0%;
     display: inline-table;
@@ -98,10 +92,10 @@ ul {
   }
 
   #facebook1{
-    width: 43%;
+    width: 40%;
   }
   #insta1{
-    width: 85%;
+    width: 75%;
   }
 
   .desktop-not-show{
